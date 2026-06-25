@@ -6,11 +6,14 @@ import postRoute from "./routes/api/post.js"
 import profileRoute from "./routes/api/profile.js"
 import userRoute from "./routes/api/user.js"
 
-dotenv.config();
-conectDb();
+
+
 
 const app=express();
 
+dotenv.config();
+conectDb();
+app.use(express.json({extended:false}))
 
 
 const port = process.env.PORT || 5000;
