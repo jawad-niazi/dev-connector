@@ -1,6 +1,6 @@
+import "dotenv/config";
 import express from "express";
 import conectDb from "./config/db.js"
-import dotenv from "dotenv"
 import authRoute from "./routes/api/auth.js";
 import postRoute from "./routes/api/post.js"
 import profileRoute from "./routes/api/profile.js"
@@ -8,10 +8,9 @@ import userRoute from "./routes/api/user.js"
 
 
 
-
 const app=express();
 
-dotenv.config();
+
 conectDb();
 app.use(express.json({extended:false}))
 
